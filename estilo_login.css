@@ -1,0 +1,210 @@
+/* Configuração geral DIV bloco login */
+
+body#bodyLogin {
+    background-image: url('img/fundo-login.png');
+}
+
+.form-login {
+    /* background-color: rgba(255, 255, 255, 0.3); */
+    border-radius: 10%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 30px;
+    /* Effect glass */
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+
+/* LOGIN */
+
+
+/* .form-login #main {
+    font-family: Arial, He lvetica, sans-serif;
+    text-align: center;
+
+} */
+
+
+/* Configuração ESTILO tela de login, bloco de nome e senha / botão  */
+
+.form-login input {
+    border-radius: 10px;
+    text-align: center;
+    padding: 15px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+}
+
+.form-login button {
+    background-color: #16a5a5;
+    border: none;
+    padding: 15px;
+    width: 100%;
+    border-radius: 10px;
+    color: whitesmoke;
+    font-size: 15px;
+}
+
+.form-login button:hover {
+    background-color: #47dada;
+    cursor: pointer;
+}
+
+
+/* PAGINA DE USUARIO+++++++++++++++++++++++++++++++++++++++++ */
+
+
+/* .pagUser body {
+    background-color: blanchedalmond;
+} */
+
+.bodyBody {
+    margin-left: 0px;
+    transition: marginLeft 0.5s;
+}
+
+.form-evento {
+    background-color: cornflowerblue;
+    margin-left: 0px;
+    transition: marginLeft 0.5s;
+}
+
+*#bodyMenu {
+    margin: 0px;
+    background-color: cadetblue;
+    z-index: 1;
+}
+
+
+/* *#bodyEvent {
+    margin: 0px;
+} */
+
+
+/*
+body#bodyMenu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: darkgray;
+} */
+
+*#nav_s {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#nav_s a {
+    text-decoration: none;
+}
+
+.btnAbrir {
+    color: whitesmoke;
+    font-size: 25px;
+}
+
+#nav_s header {
+    background-color: #404A53;
+    padding: 10px;
+}
+
+#nav_s nav {
+    height: 100%;
+    width: 0px;
+    background-color: #404A53;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    overflow: hidden;
+    transition: width 0.3s;
+}
+
+#nav_s nav a {
+    color: white;
+    font-size: 25px;
+    display: block;
+    padding: 12px 10px 12px 32px;
+}
+
+#nav_s nav a:hover {
+    background-color: whitesmoke;
+    color: #404A53;
+}
+
+#nav_s main {
+    padding: 10px;
+    transition: margin-left 0.5s;
+}
+
+#form-evento input {
+    display: block;
+    width: 100%;
+    border-radius: 20px;
+    text-align: center;
+    outline: none;
+    border: none;
+    font-size: 15px;
+    margin: 0 auto;
+    padding: 20px 0px 20px 0px;
+}
+
+.box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    background-color: darkgrey;
+    width: 400px;
+}
+
+
+/* #form-evento .formEnv {
+    display: block;
+}
+
+#form-evento .formEmp {
+    display: block;
+}
+
+#form-evento .formCnpj {
+    display: block;
+}
+
+#form-evento .formEnder {
+    display: block;
+}
+
+#form-evento .formSite {
+    display: block;
+}
+
+#form-evento .formDatin {
+    display: block;
+}
+
+#form-evento .formDatfin {
+    display: block;
+} */
+
+
+/* body#bodyEvent {
+    background-color: dimgray;
+}
+
+#form-evento {
+    background-color: cadetblue;
+    position: absolute;
+    padding: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px;
+    text-align: center;
+} */
