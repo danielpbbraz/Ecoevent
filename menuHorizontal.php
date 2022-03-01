@@ -1,5 +1,16 @@
+<?php
+    // session_start();
+    //     // print_r($_SESSION);
+    //     if((!isset($_SESSION['nomeUser']) == true) and (!isset($_SESSION['senhaUser']) == true))
+    //     {
+    //         unset($_SESSION['nomeUser']);
+    //         unset($_SESSION['senhaUser']);
+    //         header('Location: Index.php');
+    //     }
+    //     $logado = $_SESSION['nomeUser']; 
+?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 
 <head>
     <link rel="stylesheet" type="text/css" href="estilo_login.css">
@@ -20,7 +31,10 @@
         <nav id="menu">
             <a href="#" onclick="fecharMenu()">&times; Fechar</a>
             <a href="form_evento.php">Cadastro de <strong>evento</strong></a>
+            <a href="eventos.php">Lista de <strong>eventos</strong></a>
             <a href="form_usuario.php">Cadastro de <strong>usuário</strong></a>
+            <a href="perguntas.php">Listagem de <strong>perguntas</strong></a>
+            <a href="sair.php">Sair</a>
             <a href="#">topico 3</a>
         </nav>
     </div>

@@ -21,10 +21,11 @@
         
         $nomeUser = $_POST['nome'];
         $emailUser = $_POST['email'];
+        $senhaUser = $_POST['senha'];
        
 
-        $result = mysqli_query($conexao, "INSERT INTO usuario(nomeUser, emailUser) 
-        VALUES ('$nomeUser','$emailUser')");
+        $result = mysqli_query($conexao, "INSERT INTO usuario(nomeUser, emailUser , senhaUser) 
+        VALUES ('$nomeUser','$emailUser','$senhaUser')");
     }
 ?>
 <!DOCTYPE html>
@@ -62,6 +63,11 @@
                 <div class="inputBox">
                 <input type="text" name="email" id="email" class="inputUser" required>
                 <label for="email">email</label>
+                </div>
+                <br>
+                <div class="inputBox">
+                <input type="password" name="senha" id="password" class="inputUser" required>
+                <label for="password">senha</label>
                 </div>
                 <br>
                 <input type="submit" name="submit" id="submit">

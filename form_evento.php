@@ -1,9 +1,9 @@
 <?php
     if(isset($_POST['submit']))
     {
-        // print_r('Nome do evento :' . $_POST['nameEvento']);
+        // print_r('Nome do evento :' . $_POST['nomeEvento']);
         // print_r('<br>');
-        // print_r('Nome da empresa :' . $_POST['nameEmpresa']);
+        // print_r('Nome da empresa :' . $_POST['nomeEmpresa']);
         // print_r('<br>');
         // print_r('Cnpj da empresa :' . $_POST['cnpjEmpresa']);
         // print_r('<br>');
@@ -19,16 +19,18 @@
 
         include_once('config.php');
         
-        $nomeEvento = $_POST['nameEvento'];
-        $nomeEmpresa = $_POST['nameEmpresa'];
+        $id = $_POST['id'];
+        $nomeEvento = $_POST['nomeEvento'];
+        $nomeEmpresa = $_POST['nomeEmpresa'];
         $cnpjEmpresa = $_POST['cnpjEmpresa'];
+        $enderecoEvento = $_POST['enderecoEvento'];
         $siteEvento = $_POST['siteEvento'];
         $dataInicial = $_POST['dataInicial'];
         $dataFinal = $_POST['dataFinal'];
 
         $result = mysqli_query($conexao, "INSERT INTO evento(nomeEvento, nomeEmpresa, 
-        cnpjEmpresa, siteEvento, dataInicial, dataFinal) 
-        VALUES ('$nomeEvento','$nomeEmpresa','$cnpjEmpresa','$siteEvento','$dataInicial','$dataFinal')");
+        cnpjEmpresa,enderecoEvento, siteEvento, dataInicial, dataFinal) 
+        VALUES ('$nomeEvento','$nomeEmpresa','$cnpjEmpresa','$enderecoEvento','$siteEvento','$dataInicial','$dataFinal')");
     }
 ?>
 <!DOCTYPE html>
@@ -64,13 +66,13 @@
                 <br>
 
                 <div class="inputBox">
-                <input type="text" name="nameEvento" id="nameEvento" class="inputUser" required>
-                <label for="nameEvento">Nome Evento</label>
+                <input type="text" name="nomeEvento" id="nomeEvento" class="inputUser" required>
+                <label for="nomeEvento">Nome Evento</label>
                 </div>
                 <br>
                 <div class="inputBox">
-                <input type="text" name="nameEmpresa" id="nameEmpresa" class="inputUser" required>
-                <label for="nameEmpresa">Nome empresa</label>
+                <input type="text" name="nomeEmpresa" id="nomeEmpresa" class="inputUser" required>
+                <label for="nomeEmpresa">Nome empresa</label>
                 </div>
                 <br>
                 <div class="inputBox">

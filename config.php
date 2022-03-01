@@ -3,7 +3,7 @@
  $dbHost = 'Localhost';
  $dbUsername = 'root';
  $dbPassword = '';
- $dbName = 'users';
+ $dbName = 'eco_event';
 
  $conexao = new mysqli($dbHost,$dbUsername,$dbPassword,$dbName);
 

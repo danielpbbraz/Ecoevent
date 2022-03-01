@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-widht, initial-scale=1.0">
 
-    <title>Tela Login</title>
+    <title>Eco Event | Login </title>
 </head>
 
 <body id="bodyLogin">
@@ -16,12 +16,13 @@
 
 
         <!-- <h1 id="main">Login</h1> -->
-        <input id="name" type="text" placeholder="Nome">
-        <br><br>
-        <input id="senha" type="password" placeholder="Senha">
-        <br><br>
-        <a href="menuHorizontal.php"><button>Enviar</button></a>
-
+        <form action="testeLogin.php" method="POST">
+            <input id="name" type="text" name="nomeUser" placeholder="nome">
+            <br><br>
+            <input id="senha" type="password" name="senhaUser" placeholder="senha">
+            <br><br>
+            <input class="inputSubmit" type="submit" name="submit" value="Enviar">
+        </form>
 </body>
 </div>
 
