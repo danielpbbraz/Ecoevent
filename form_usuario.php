@@ -30,7 +30,7 @@
 ?>
 <!DOCTYPE html>
 <html lang="pt">
-<?php include 'menuHorizontal.php'; ?> 
+<?php include 'menuHorizontal.php'; ?>
 
 <head>
     <link rel="stylesheet" type="text/css" href="estilo_login.css">
@@ -56,20 +56,26 @@
                 <legend><b>Formulário Usuario</b></legend>
                 <br>
                 <div class="inputBox">
-                <input type="text" name="nome" id="nome" class="inputUser" required>
-                <label for="nome">Nome</label>
+                    <input type="text" name="nome" id="nome" class="inputUser" required>
+                    <label for="nome">Nome</label>
                 </div>
                 <br>
                 <div class="inputBox">
-                <input type="text" name="email" id="email" class="inputUser" required>
-                <label for="email">email</label>
+                    <input type="text" name="email" id="email" class="inputUser" required>
+                    <label for="email">email</label>
                 </div>
                 <br>
                 <div class="inputBox">
-                <input type="password" name="senha" id="password" class="inputUser" required>
-                <label for="password">senha</label>
+                    <input type="password" name="senha" id="password" class="inputUser" required>
+                    <label for="password">senha</label>
                 </div>
-                <br>
+                <select name="event" id="event_1" class="inputUser">
+                    <option>Exemplo 1</option>
+                    <option>Exemplo 2</option>
+                    <option>Exemplo 3</option>
+                    <option>Exemplo 4</option>
+                </select>
+
                 <input type="submit" name="submit" id="submit">
             </fieldset>
         </form>

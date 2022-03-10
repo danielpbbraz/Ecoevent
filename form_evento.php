@@ -19,11 +19,11 @@
 
         include_once('config.php');
         
-        $id = $_POST['id'];
+        // $id = $_POST['id'];
         $nomeEvento = $_POST['nomeEvento'];
         $nomeEmpresa = $_POST['nomeEmpresa'];
         $cnpjEmpresa = $_POST['cnpjEmpresa'];
-        $enderecoEvento = $_POST['enderecoEvento'];
+        $enderecoEvento = $_POST['endEvento'];
         $siteEvento = $_POST['siteEvento'];
         $dataInicial = $_POST['dataInicial'];
         $dataFinal = $_POST['dataFinal'];

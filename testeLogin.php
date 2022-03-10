@@ -17,7 +17,8 @@ session_start();
       $sql = "SELECT * FROM usuario WHERE nomeUser = '$nomeUser' and senhaUser = '$senhaUser'";
 
       $result = $conexao->query($sql);
-
+      $user_data = mysqli_fetch_assoc($result);
+      $idUser = $user_data['id'];
       // print_r($sql);
       // print_r('<br>');
       // print_r($result);
@@ -26,12 +27,24 @@ session_start();
       {
         unset($_SESSION['nomeUser']);
         unset($_SESSION['senhaUser']);
-        header('Location: Index.php');
+        header("location: Index.php?id=". $user_data['id']);
       }
       else{
-        $_SESSION['nomeUser'] = $nomeUser;
-        $_SESSION['senhaUser'] = $senhaUser;
-        header('Location: menuHorizontal.php');
+
+        if($user_data['admUser'] == 1){
+
+          $_SESSION['nomeUser'] = $nomeUser;
+          $_SESSION['senhaUser'] = $senhaUser;
+          header("location: menuHorizontal.php?id=". $user_data['id']);
+        
+        }else{
+        
+          $_SESSION['nomeUser'] = $nomeUser;
+          $_SESSION['senhaUser'] = $senhaUser;
+          header("Location: pageUser.php?id=". $user_data['id']);
+
+        }
+
      }
       
       

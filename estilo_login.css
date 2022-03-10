@@ -235,3 +235,51 @@ body#bodyMenu {
     text-align: left;
     font-weight: 500;
 }
+
+.bodyForm {
+    background-color: #16a5a5;
+    margin-left: 400px;
+    margin-right: 400px;
+    margin-top: 100px;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.labelForm {
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 50px;
+}
+
+#alter_1 {
+    margin-top: 10px;
+}
+
+.submitForm {
+    margin-top: 20px;
+    width: 100px;
+    height: 30px;
+    border-radius: 8px;
+    border: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: floralwhite;
+    font-size: 15px;
+}
+
+#lateralBar {
+    background-color: #404A53;
+    position: fixed;
+    width: 350px;
+    height: 100%;
+}
+
+.formUserNav {
+    font-size: 30px;
+    color: aliceblue;
+    text-decoration: none;
+    margin: 60px;
+}
+
+a {
+    text-align: center;
+}
