@@ -29,7 +29,7 @@ include_once('config.php');
     while($user_data = mysqli_fetch_assoc($result))  {
               
         if($user_data['userForm'] == $idUser){
-        echo '<a class="formUserNav" href="formView.php">'.$user_data['nomeForm'].'</a>';
+        echo "<a class='formUserNav' href='formView.php?id=$idUser'>".$user_data['nomeForm']."</a>";
     }
     }
         ?>

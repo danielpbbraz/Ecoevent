@@ -1,4 +1,6 @@
 <?php
+    
+
     if(isset($_POST['submit']))
     {
         // print_r('Nome do evento :' . $_POST['nameEvento']);
@@ -16,16 +18,22 @@
         // print_r('Data incial :' . $_POST['dataInicial']);
         // print_r('<br>');
         // print_r('Data final :' . $_POST['dataFinal']);
-
-        include_once('config.php');
         
+        $idUser = $_GET['id'];
+        include_once('config.php');
+        include 'menuHorizontal.php';
+        
+
+        $eventoEmp = 3;
         $nomeUser = $_POST['nome'];
         $emailUser = $_POST['email'];
         $senhaUser = $_POST['senha'];
-       
+        
 
-        $result = mysqli_query($conexao, "INSERT INTO usuario(nomeUser, emailUser , senhaUser) 
-        VALUES ('$nomeUser','$emailUser','$senhaUser')");
+        $result = mysqli_query($conexao, "INSERT INTO usuario(eventoEmp, nomeUser, emailUser , senhaUser) 
+        VALUES ('$eventoEmp','$nomeUser','$emailUser','$senhaUser')");
+
+        header('Location: eventos.php');
     }
 ?>
 <!DOCTYPE html>
@@ -69,14 +77,14 @@
                     <input type="password" name="senha" id="password" class="inputUser" required>
                     <label for="password">senha</label>
                 </div>
-                <select name="event" id="event_1" class="inputUser">
+                <!-- <select name="event" id="event_1" class="inputUser">
                     <option>Exemplo 1</option>
                     <option>Exemplo 2</option>
                     <option>Exemplo 3</option>
                     <option>Exemplo 4</option>
-                </select>
+                </select> -->
 
-                <input type="submit" name="submit" id="submit">
+                <input type="submit" name="submit" id="submit" >
             </fieldset>
         </form>
     </div>

@@ -127,9 +127,9 @@ body#bodyMenu {
 
 #nav_s nav a {
     color: white;
-    font-size: 25px;
+    font-size: 20px;
     display: block;
-    padding: 12px 10px 12px 32px;
+    padding: 25px 10px 12px 32px;
 }
 
 #nav_s nav a:hover {
@@ -210,7 +210,9 @@ body#bodyMenu {
 } */
 
 #event {
-    width: 1600px;
+    width: 1700px;
+    height: 700px;
+    overflow: auto;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
@@ -280,6 +282,60 @@ body#bodyMenu {
     margin: 60px;
 }
 
-a {
-    text-align: center;
+h1 {
+    font-size: 25px;
 }
+
+#formVisual {
+    background-color: aliceblue;
+    padding: 50px;
+    border-radius: 60px;
+}
+
+#formVisual h1 {
+    font-size: 20px;
+    font-weight: normal;
+}
+
+#formVisual .boxForm {
+    margin-top: 50px;
+}
+
+#formVisual label {
+    margin-top: 20px;
+}
+
+#formVisual input {
+    margin-top: 10px;
+}
+
+#dissert {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+#list {
+    font-size: 20px;
+}
+
+.submitForm {
+    position: relative;
+    /* display: block; */
+    left: 0;
+    background-color: rgb(19, 202, 65);
+    color: aliceblue;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
+
+#dissert-1 {
+    display: none;
+    width: 300px;
+    height: 100px;
+}
+
+
+/* #dissert-2 {
+    display: none;
+} */

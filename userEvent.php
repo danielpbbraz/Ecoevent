@@ -2,12 +2,10 @@
 include 'menuHorizontal.php';
 include_once('config.php');
     $idP = $_GET['id'];
-
-    $sql = "SELECT * FROM usuario WHERE eventoEmp = $idP ORDER BY id ASC";
+    print_r($idP);
+    $sql = "SELECT * FROM usuario WHERE eventoEmp = $idP";
 
     $result = $conexao->query($sql);
-
-    // print_r($result);
 ?>
 
 <!DOCTYPE html>
@@ -24,6 +22,10 @@ include_once('config.php');
 </head>
 
 <body>
+    <?php
+    echo "<a href='form_usuario.php?id=$idP'> Criar usuario</a>";
+    ?>
+    <br>
     <a href="eventos.php">Voltar</a>
 
     <div id="event">

@@ -30,12 +30,11 @@
         </header>
         <nav id="menu">
             <a href="#" onclick="fecharMenu()">&times; Fechar</a>
-            <a href="form_evento.php">Cadastro de <strong>evento</strong></a>
-            <a href="eventos.php">Lista de <strong>eventos</strong></a>
-            <a href="form_usuario.php">Cadastro de <strong>usuário</strong></a>
-            <a href="perguntas.php">Listagem de <strong>perguntas</strong></a>
+            <a href="form_evento.php">Cadastro de evento</a>
+            <!-- <a href="form_usuario.php">Cadastro de usuário</a> -->
+            <a href="eventos.php">Lista de eventos</a>
+            <a href="perguntas.php">Listagem de perguntas</a>
             <a href="sair.php">Sair</a>
-            <a href="#">topico 3</a>
         </nav>
     </div>
     <main id="conteudo">
