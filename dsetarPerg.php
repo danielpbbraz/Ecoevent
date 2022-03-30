@@ -7,7 +7,7 @@ include_once('config.php');
     $idUser = $_GET['idUser1'];
     $idEvent = $_GET['idEvent1'];
 
-    header('Location: selectPerguntas.php?id='.$idUser.'&id2='.$idEvent.'');
+    // header('Location: selectPerguntas.php?id='.$idUser.'&id2='.$idEvent.'');
 
     $questao = 'questao_'.$idUser;
 
@@ -34,7 +34,9 @@ include_once('config.php');
         print_r('Com cadastro');
         print_r('<br>');
 
-    }else{  
+   
+    }else{
+
         print_r('Sem cadastro');
         print_r('<br>');
         $nameForm = "formulário - 1";
@@ -55,31 +57,28 @@ include_once('config.php');
 
    //VERIFICAR ESPAÇO NA TABELA VAZIO 
     while(!empty ($perguntaNull['questao_'.++$i])){
+
+        if($perguntaNull['questao_'.$i] == $idQuest){
+           $receb = "questao_".$i;
+           print_r('Funcionou');
+           
+            $sqlUpdate = "UPDATE formsave SET questao_$i = null  WHERE userForm=$idUser ";
+            $result = $conexao->query($sqlUpdate);
+
+        }
+
         print_r('<br>');
         print_r('Celula cheia'); 
         print_r('<br>');       
+    
     }
 
     print_r('A celula vazia é: ' . $i);
     $e = 'questao_'.$i;
             
-    
         
-            $sqlUpdate = "UPDATE formsave SET  $e=$idQuest WHERE userForm=$idUser";
-            $result = $conexao->query($sqlUpdate);
-            print_r('Funcionou');
-   
 
-   
-   
-
-                
             
- 
-
-
-
-
 
     // $sqlUpdate = "UPDATE formsave SET questao_1='teste' WHERE id_form='1'";
 

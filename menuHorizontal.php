@@ -33,7 +33,7 @@
             <a href="form_evento.php">Cadastro de evento</a>
             <!-- <a href="form_usuario.php">Cadastro de usuário</a> -->
             <a href="eventos.php">Lista de eventos</a>
-            <a href="perguntas.php">Listagem de perguntas</a>
+            <!-- <a href="perguntas.php">Listagem de perguntas</a> -->
             <a href="sair.php">Sair</a>
         </nav>
     </div>

@@ -61,7 +61,7 @@
 
     <div class="box" id="form-evento">
         <form action="form_evento.php" method="POST">
-            <fieldset>
+            <!-- <fieldset> -->
                 <legend><b>Formulário Evento</b></legend>
                 <br>
 
@@ -101,7 +101,7 @@
                 </div> 
                 <br>
                 <input type="submit" name="submit" id="submit">
-            </fieldset>
+            <!-- </fieldset> -->
         </form>
     </div>
 

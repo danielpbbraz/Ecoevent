@@ -3,12 +3,55 @@ include 'menuHorizontal.php';
 include_once('config.php');
 
     $idUser = $_GET['id'];  
+    $idEvent = $_GET['id2'];
     // $sqlSelectPrimary = "SELECT * FROM formsave WHERE id=$id";   
 
     $sql = "SELECT * FROM perguntas ORDER BY id ASC";
 
     $result = $conexao->query($sql);
+     
+
+    $sql1 = "SELECT * FROM formsave WHERE eventoSel = $idEvent";
+    $result1 = $conexao->query($sql1);
+
+    $i = 1;
     
+    while($user_data1 = mysqli_fetch_assoc($result1)){
+        // print_r("Passou pelo while");
+        
+        while(!empty ($user_data1['questao_'.$i])){
+
+                $quest[$i] = $user_data1['questao_'.$i];
+                print_r($user_data1['questao_'.$i]);
+                $i++;
+            }
+
+        $reg = 1;
+        }
+        // print_r($quest);
+
+    // function verificarSelecionado($id){
+    
+            
+    //         $idEvent = $_GET['id2'];
+    //         $sql1 = "SELECT * FROM formsave WHERE eventoSel = $idEvent";
+    //         $result1 = $conexao->query($sql1);
+
+
+    //         while($user_data1 = mysqli_fetch_assoc($result1)){
+
+    //             $i = 1;
+    //             while(!empty ('questao_'.$i)){
+    //                 if($user_data1['questao_'.$i] == $id){
+    //                     print_r("Já foi utilizada");
+    //                 }
+
+
+
+    //             $i++;
+    //         }
+
+
     // print_r($result);
 ?>
 
@@ -26,6 +69,15 @@ include_once('config.php');
 </head>
 
 <body>
+    <script>
+
+    function mudarCor(id){
+
+        document.getElementById(id).style.background.color = 'green';
+    }
+
+
+    </script>
 
     <div id="event">
 
@@ -46,8 +98,14 @@ include_once('config.php');
             </thead>
             <tbody>
                 <?php
+
+                   $idUser = $_GET['id'];  
+                   $idEvent = $_GET['id2'];
+
                     while($user_data = mysqli_fetch_assoc($result))
                     {
+
+
                         echo "<tr>";
                         echo "<td>".$user_data['id']."</td>";
                         echo "<td>".$user_data['tema']."</td>";
@@ -61,18 +119,56 @@ include_once('config.php');
                         // echo "<td>".$user_data['sub_alter_3']."</td>";
                         // echo "<td>".$user_data['sub_alter_4']."</td>";
                         echo "<td>".$user_data['tipoPergunta']."</td>";
-                        echo "<td>".$user_data['valorPonto']."</td>";
-                        echo "<td>
-                        
-                        <a class='btn btn-sm btn-primary' href='setarPerg.php?id=$user_data[id]&idUser=$idUser'>
+                        //echo "<td>".$user_data['valorPonto']."</td>";            
+                        if(!empty($quest)){
+                        if(in_array($user_data['id'], $quest) == true){
+                           
+                            echo "<td>
+                                
+                            <a class='btn btn-danger' id='".$user_data['id']."' href='dsetarPerg.php?idQuest=$user_data[id]&idUser1=$idUser&idEvent1=$idEvent'>
+           
+                            <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-x-lg' viewBox='0 0 16 16'>
+  <path fill-rule='evenodd' d='M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z'/>
+  <path fill-rule='evenodd' d='M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z'/>
+</svg>
+            </a>
+                                            </td>";
+                            
+                        }else{
 
-                        <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-pencil' viewBox='0 0 16 16'>
-        <path d='M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z'/>
-        </svg>
-        </a>
+echo "<td>
+                                
+                            <a class='btn btn-success' id='' href='setarPerg.php?idQuest=$user_data[id]&idUser1=$idUser&idEvent1=$idEvent'>
+           
+                            <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-plus-lg' viewBox='0 0 16 16'>
+  <path fill-rule='evenodd' d='M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z'/>
+</svg>
+            </a>
+</td>";
+
+                        }
+                    }else{
+                       
                         
-                        </td>";
-                    }
+echo "<td>
+                                
+<a class='btn btn-success' id='' href='setarPerg.php?idQuest=$user_data[id]&idUser1=$idUser&idEvent1=$idEvent'>
+
+<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-plus-lg' viewBox='0 0 16 16'>
+<path fill-rule='evenodd' d='M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z'/>
+</svg>
+</a>
+</td>";
+
+}
+                
+              
+            
+                
+            
+            
+            }      
+                    
                 ?>
             </tbody>
         </table>

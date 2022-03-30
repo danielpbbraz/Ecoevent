@@ -1,5 +1,5 @@
 <?php
-    
+    $idUser = $_GET['id'];
 
     if(isset($_POST['submit']))
     {
@@ -19,12 +19,12 @@
         // print_r('<br>');
         // print_r('Data final :' . $_POST['dataFinal']);
         
-        $idUser = $_GET['id'];
+        
         include_once('config.php');
         include 'menuHorizontal.php';
         
-
-        $eventoEmp = 3;
+   
+        $eventoEmp = $_POST['evento'];
         $nomeUser = $_POST['nome'];
         $emailUser = $_POST['email'];
         $senhaUser = $_POST['senha'];
@@ -60,23 +60,31 @@
 
     <div class="box" id="form-usuario">
         <form action="form_usuario.php" method="POST">
-            <fieldset>
+            <!-- <fieldset> -->
                 <legend><b>Formulário Usuario</b></legend>
                 <br>
                 <div class="inputBox">
-                    <input type="text" name="nome" id="nome" class="inputUser" required>
+                    <input type="text" name="nome" id="nome" placeholder="nome" class="inputUser" required>
                     <label for="nome">Nome</label>
                 </div>
                 <br>
                 <div class="inputBox">
-                    <input type="text" name="email" id="email" class="inputUser" required>
+                    <input type="text" name="email" id="email" placeholder="email" class="inputUser" required>
                     <label for="email">email</label>
                 </div>
                 <br>
                 <div class="inputBox">
-                    <input type="password" name="senha" id="password" class="inputUser" required>
+                    <input type="password" name="senha" id="password" class="inputUser" placeholder="senha" required>
                     <label for="password">senha</label>
                 </div>
+                <br>
+                <div class="inputBox">
+                    <input type="number" name="evento" id="evento" placeholder="id evento" class="inputUser" required>
+                    <label for="evento">Id evento</label>
+                </div>
+                <!-- <div class="inputBox">
+                    <input type="hidden" name="evento"  class="inputUser" required>
+                </div> -->
                 <!-- <select name="event" id="event_1" class="inputUser">
                     <option>Exemplo 1</option>
                     <option>Exemplo 2</option>
@@ -85,7 +93,7 @@
                 </select> -->
 
                 <input type="submit" name="submit" id="submit" >
-            </fieldset>
+            <!-- </fieldset> -->
         </form>
     </div>
 
